@@ -1,16 +1,89 @@
-# React + Vite
+# 🍔 Food Delivery App (React + Node.js)
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A full-stack food delivery web application where users can browse menu items, add to cart, and place orders.
 
-Currently, two official plugins are available:
+---
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## 🚀 Features
 
-## React Compiler
+- 🏠 Home page with food categories
+- 📋 Explore menu section
+- 🛒 Add to cart functionality
+- ➕ Increase / decrease quantity
+- 💰 Cart total calculation
+- 📦 Place order page
+- 🔐 Login / Signup popup UI
+- 📱 Responsive design
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+---
 
-## Expanding the ESLint configuration
+## 🛠️ Tech Stack
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### Frontend:
+
+- React.js
+- CSS
+
+### Backend (in progress):
+
+- Node.js
+- Express.js
+- MongoDB
+
+---
+
+## 📂 Project Structure
+
+```
+food-delivery-app/
+│
+├── frontend/ (React App)
+│   ├── src/
+│   ├── components/
+│   ├── pages/
+│
+├── backend/ (Node + Express - coming soon)
+│
+└── README.md
+```
+
+---
+
+## ⚙️ Installation & Setup
+
+### 1. Clone the repository
+
+```
+git clone https://github.com/swatiwavare/food-delivery-app.git
+```
+
+### 2. Install dependencies
+
+```
+npm install
+```
+
+### 3. Run frontend
+
+```
+npm run dev
+```
+
+## 🎯 Future Improvements
+
+- 🔐 Authentication (JWT)
+- 💳 Payment integration (Stripe)
+- 📦 Order tracking
+- 📊 Admin dashboard
+
+---
+
+## 🙋‍♂️ Author
+
+- Swati Wavare
+
+---
+
+## ⭐ If you like this project
+
+Give it a ⭐ on GitHub!
