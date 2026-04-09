@@ -5,7 +5,7 @@ import { menu_list } from "../../assets/assets";
 const ExploreMenu = () => {
   const { category, setCategory } = useContext(StoreContext);
   return (
-    <div className="explore-menu">
+    <div id="explore-menu" className="explore-menu">
       <h2>Explore our menu</h2>
 
       <p className="explore-menu-text">

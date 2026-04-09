@@ -18,6 +18,18 @@ export const StoreContextProvider = ({ children }) => {
       return updated;
     });
   };
+  const getTotalCartAmount = () => {
+    let totalAmount = 0;
+
+    for (const item in cartItems) {
+      if (cartItems[item] > 0) {
+        let itemInfo = food_list.find((product) => product._id === item);
+        totalAmount += itemInfo.price * cartItems[item];
+      }
+    }
+
+    return totalAmount;
+  };
   const removeFromCart = (id) => {
     setCartItems((prev) => {
       const updated = { ...prev };
@@ -39,6 +51,7 @@ export const StoreContextProvider = ({ children }) => {
     removeFromCart,
     category,
     setCategory,
+    getTotalCartAmount,
   };
   return (
     <StoreContext.Provider value={contextValue}>
