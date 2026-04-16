@@ -1,0 +1,8 @@
+POST http://localhost:4000/api/food/add
+Content-Type: multipart/form-data
+
+name=Pizza 1
+description=Tasty Food
+price=200
+category=Fast Food
+image=@C:/react/food-delivery-app/frontend/src/assets/pizza.png
