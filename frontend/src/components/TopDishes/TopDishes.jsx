@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { StoreContext } from "../../context/StoreContext";
 import "./TopDishes.css";
 const TopDishes = () => {
-  const { food_list, cartItems, addToCart, removeFromCart, category } =
+  const { food_list, cartItems, addToCart, removeFromCart, category, url } =
     useContext(StoreContext);
   return (
     <div className="top-dishes" id="top-dishes">
@@ -14,7 +14,7 @@ const TopDishes = () => {
             <div className="food-item" key={item._id}>
               {/* Image */}
               <div className="food-item-img-container">
-                <img src={item.image} alt={item.name} />
+                <img src={url + "/images/" + item.image} alt={item.name} />
                 {cartItems[item._id] ? (
                   <div className="counter">
                     <button onClick={() => removeFromCart(item._id)}>-</button>

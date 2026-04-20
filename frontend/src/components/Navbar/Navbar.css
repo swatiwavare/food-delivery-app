@@ -3,6 +3,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
 }
 .navbar .logo{
     width:150px;
@@ -49,7 +50,6 @@
     background-color: tomato;
     border-radius: 8px;
     top: -8px;
-    bottom: 31px;
     right: -2px;
 }
 .navbar-profile{

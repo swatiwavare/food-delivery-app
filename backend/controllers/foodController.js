@@ -35,7 +35,7 @@ const listfood = async (req, res) => {
 };
 const deletefood = async (req, res) => {
   try {
-    const food = foodModel.findById(req.body.id);
+    const food = await foodModel.findById(req.body.id);
     fs.unlink(`uploads/${food.image}`, () => {});
     await foodModel.findByIdAndDelete(req.body.id);
     res.json({ success: true, message: "Food Removed" });
@@ -46,7 +46,9 @@ const deletefood = async (req, res) => {
 };
 const updatefood = async (req, res) => {
   try {
-    const food = foodModel.findById(req.body.id);
+    console.log(req.body);
+    console.log(req.file);
+    const food = await foodModel.findById(req.body.id);
     if (!food) {
       return res.json({ success: false, message: "Food not found" });
     }
@@ -61,7 +63,7 @@ const updatefood = async (req, res) => {
       food.image = req.file.filename;
     }
     //update name
-    if (name) {
+    if (req.body.name) {
       food.name = req.body.name;
     }
     await food.save();
